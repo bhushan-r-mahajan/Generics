@@ -1,19 +1,38 @@
 public class FindMaximum {
 
-    public static <Z> void  printArray(Z[] input) {
-        System.out.println("<--The Values in Array are-->");
-        for(Z value : input) {
-            System.out.println(value);
+    public static Integer printMaxInteger(Integer x, Integer y, Integer z) {
+        Integer max = x;
+        if(y.compareTo(max) > 0) {
+            max = y;
         }
+        if(z.compareTo(max) > 0) {
+            max = z;
+        }
+        System.out.println("<---The Maximum Element is: " + max + " --->");
+        return max;
     }
 
-    public static void main(String[] args) {
-        Integer[] intArray = {1, 2, 3, 4, 5};
-        Double[] doubleArray = {1.0, 2.0, 3.0, 4.0, 5.0};
-        String[] stringArray = {"apple", "banana", "mangoes", "grapes", "watermelon" };
+    public static Double printMaxDouble(Double x, Double y, Double z) {
+        Double max = x;
+        if(y.compareTo(max) > 0) {
+            max = y;
+        }
+        if(z.compareTo(max) > 0) {
+            max = z;
+        }
+        System.out.println("<---The Maximum Element is: " + max + " --->");
+        return max;
+    }
 
-        printArray(intArray);
-        printArray(doubleArray);
-        printArray(stringArray);
+    public static String printMaxString(String x, String y, String z) {
+        String max = x;
+        if(y.compareTo(max) > 0) {
+            max = y;
+        }
+        if(z.compareTo(max) > 0) {
+            max = z;
+        }
+        System.out.println("<---The Maximum Element is: " + max + " --->");
+        return max;
     }
 }
