@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+
 @SuppressWarnings("ALL")
 public class FindMaximum < Z extends Comparable> {
     Z x, y, z;
@@ -16,7 +20,13 @@ public class FindMaximum < Z extends Comparable> {
         if(z.compareTo(max) > 0) {
             max = z;
         }
-        System.out.println("The Maximum element is found using Generic class is: " + max);
+        System.out.println("#### The Maximum element found using Generic class is: " + max + " ####");
+        return max;
+    }
+
+    public static <Z extends Comparable <Z>> Z pritnMultiple(Z[] input) {
+        Z max = Collections.max(Arrays.asList(input));
+        System.out.println("**** The Max Element From given array is: " + max + " ****");
         return max;
     }
 
@@ -28,7 +38,12 @@ public class FindMaximum < Z extends Comparable> {
         if(z.compareTo(max) > 0) {
             max = z;
         }
-        System.out.println("<---The Maximum Element is: " + max + " --->");
+        System.out.println("<--- The Maximum Element is: " + max + " --->");
         return max;
     }
+
+//    public static void main(String[] args) {
+//        Integer[] array = {78,1,2,3,4};
+//        pritnMultiple(array);
+//    }
 }
