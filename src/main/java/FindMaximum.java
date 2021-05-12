@@ -1,9 +1,8 @@
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Iterator;
 
 @SuppressWarnings("ALL")
-public class FindMaximum < Z extends Comparable> {
+public class FindMaximum<Z extends Comparable> {
     Z x, y, z;
 
     public FindMaximum() {
@@ -12,19 +11,7 @@ public class FindMaximum < Z extends Comparable> {
         this.z = z;
     }
 
-    public Z testMaximum(Z x, Z y, Z z) {
-        Z max = x;
-        if(y.compareTo(max) > 0) {
-            max = y;
-        }
-        if(z.compareTo(max) > 0) {
-            max = z;
-        }
-        System.out.println("#### The Maximum element found using Generic class is: " + max + " ####");
-        return max;
-    }
-
-    public static <Z extends Comparable <Z>> Z pritnMultiple(Z[] input) {
+    public static <Z extends Comparable<Z>> Z pritnMultiple(Z[] input) {
         Z max = Collections.max(Arrays.asList(input));
         System.out.println("**** The Max Element From given array is: " + max + " ****");
         return max;
@@ -32,18 +19,25 @@ public class FindMaximum < Z extends Comparable> {
 
     public static <Z extends Comparable<Z>> Z printMax(Z x, Z y, Z z) {
         Z max = x;
-        if(y.compareTo(max) > 0) {
+        if (y.compareTo(max) > 0) {
             max = y;
         }
-        if(z.compareTo(max) > 0) {
+        if (z.compareTo(max) > 0) {
             max = z;
         }
         System.out.println("<--- The Maximum Element is: " + max + " --->");
         return max;
     }
 
-//    public static void main(String[] args) {
-//        Integer[] array = {78,1,2,3,4};
-//        pritnMultiple(array);
-//    }
+    public Z testMaximum(Z x, Z y, Z z) {
+        Z max = x;
+        if (y.compareTo(max) > 0) {
+            max = y;
+        }
+        if (z.compareTo(max) > 0) {
+            max = z;
+        }
+        System.out.println("#### The Maximum element found using Generic class is: " + max + " ####");
+        return max;
+    }
 }
