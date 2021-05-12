@@ -1,22 +1,8 @@
 public class FindMaximum {
 
-    public static void printArray(Integer[] input) {
-        System.out.println("<--The Integer Values are-->");
-        for(int value:input) {
-            System.out.println(value);
-        }
-    }
-
-    public static void printArray(Double[] input) {
-        System.out.println("<--The Double Values are-->");
-        for(double value:input) {
-            System.out.println(value);
-        }
-    }
-
-    public static void printArray(String[] input) {
-        System.out.println("<--The String Values are-->");
-        for(String value:input) {
+    public static <Z> void  printArray(Z[] input) {
+        System.out.println("<--The Values in Array are-->");
+        for(Z value : input) {
             System.out.println(value);
         }
     }
